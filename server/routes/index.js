@@ -9,7 +9,7 @@ router.post('/register', rootController.postRegisterHandler)
 router.post('/login', rootController.postLoginHandler)
 router.post('/foods', auth, rootController.postFoodHandler)
 router.get('/foods', auth, rootController.getFoodSpecificHandler)
-router.delete('foods/:id', auth, authorization, rootController.deleteFoodHandler)
+router.delete('/foods/:id', auth, authorization, rootController.deleteFoodHandler)
 
 
 module.exports = router
