@@ -20,12 +20,6 @@ module.exports = (sequelize, DataTypes) => {
   User.init({
     email: DataTypes.STRING,
     password: DataTypes.STRING
-  },{
-    hooks:{
-      beforeCreate(){
-        user.password = hashPassword(user.password)
-      }
-    }
   }, {
     sequelize,
     modelName: 'User',

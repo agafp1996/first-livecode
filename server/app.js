@@ -9,3 +9,10 @@ app.use(express.json())
 const indexRouter = require('./routes/index')
 
 
+app.use('/', indexRouter)
+
+app.listen(port, ()=>{
+    console.log(`running at port ${port}`)
+})
+
+
